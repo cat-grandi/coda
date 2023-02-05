@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="kr-dark-mode" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="https://use.typekit.net/yho8uas.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>RecurForm</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Azeret+Mono:400,500,600,700,800,900&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Calibre-R.css">
+    <link rel="stylesheet" href="assets/css/CharterITC.css">
+    <link rel="stylesheet" href="assets/css/Hack.css">
+    <link rel="stylesheet" href="assets/css/Inter.css">
+    <link rel="stylesheet" href="assets/css/Roboto.css">
+    <link rel="stylesheet" href="assets/css/Tiempos-Headline.css">
+    <link rel="stylesheet" href="assets/css/codaFormat.css">
+</head>
+
+<body class="d-flex justify-content-center align-items-center">
+    <div class="card" style="min-width: 510px;">
+        <div class="card-header d-flex flex-row justify-content-between">
+            <h5 class="mb-0">reccurence</h5>
+            <div class="form-check form-switch"><input type="checkbox" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="chk_dark" class="form-check-input ms-0" name="DarkMode" title="toggle dark mode" checked=""></div>
+        </div>
+        <div class="card-body container-fluid">
+            <form class="container-fluid" method="post">
+                <div class="align-items-stretch row pb-3">
+                    <div class="d-flex align-items-center col-auto ms-0 ps-0 pe-0"><span class="mock-label">First Occurrence</span></div>
+                    <div class="col ps-sm-0 pe-sm-0"><input class="border rounded-pill form-control" type="date" required="" name="date_first"></div>
+                </div>
+                <div class="align-items-stretch row pb-3">
+                    <div class="d-sm-flex align-items-sm-center col-auto ms-sm-0 ps-sm-0 pe-sm-0"><span class="mock-label" style="background: var(--bs-card-cap-bg);">Repeat every</span></div>
+                    <div class="d-inline-flex col ps-sm-0 pe-0"><input class="form-control ps-3 pe-0" type="number" id="num_period" required="" min="1" max="365" value="1" style="border-top-left-radius: 50rem;border-bottom-left-radius: 50rem;width: 79px;text-align: center;" name="num_period"><select class="form-select me-0 col" id="dd_period" style="border-top-right-radius: 50rem;border-bottom-right-radius: 50rem;" name="dd_period" required="">
+                            <option value="day" selected="">day</option>
+                            <option value="week">week</option>
+                            <option value="month">month</option>
+                            <option value="year">year</option>
+                        </select></div>
+                </div>
+                <div class="align-items-stretch row collapse" id="collapse_MonthlyOn">
+                    <div class="row pb-3" style="margin: 0;padding: 0;">
+                        <div class="d-sm-flex align-items-sm-center col-auto ms-0 ps-0 pe-0 pb-3"><span class="border-0" style="background: var(--bs-card-cap-bg);padding-right: 18px;">Monthly on</span></div>
+                        <div class="col ps-sm-0 pe-sm-0"><select class="form-select me-0" id="dd_monthly" name="dd_monthly" style="font-family: 'Azeret Mono', monospace;background: #343434;border: 1px solid rgb(70,70,70);border-top-left-radius: 50rem;border-top-right-radius: 50rem;border-bottom-right-radius: 50rem;border-bottom-left-radius: 50rem;color: rgb(255,255,255);">
+                                <option value="monthly on day #" selected="">day #</option>
+                                <option value="monthly on the first/sec.. day">monthly on the first/sec.. day</option>
+                            </select></div>
+                    </div>
+                </div>
+                <div class="align-items-stretch row collapse" id="collapse_RepeatOn">
+                    <div class="row pb-3" style="margin: 0;padding: 0;">
+                        <div class="d-sm-flex align-items-sm-center col-auto ms-sm-0 ps-sm-0 pe-sm-0"><span class="border-0" style="background: var(--bs-card-cap-bg);padding-right: 18px;border-right-color: var(--bs-card-cap-bg);">Repeat on</span></div>
+                        <div class="d-flex col ps-sm-0 pe-0"><button class="btn btn-primary fw-bold col ps-1 pe-0" data-bs-toggle="tooltip" data-bss-tooltip="" type="button" style="border-top-left-radius: 50rem;border-bottom-left-radius: 50rem;font-family: 'Azeret Mono', monospace;color: #ffffff;background: #343434;" title="Sunday">S</button><button class="btn btn-primary fw-bold border rounded-0 border-0 col ps-0 pe-0" data-bs-toggle="tooltip" data-bss-tooltip="" type="button" title="Monday" style="font-family: 'Azeret Mono', monospace;color: #ffffff;background: #343434;">M</button><button class="btn btn-primary fw-bold border rounded-0 border-0 col ps-0 pe-0" data-bs-toggle="tooltip" data-bss-tooltip="" type="button" title="Tuesday" style="font-family: 'Azeret Mono', monospace;color: #ffffff;background: #343434;">T</button><button class="btn btn-primary fw-bold border rounded-0 border-0 col ps-0 pe-0" data-bs-toggle="tooltip" data-bss-tooltip="" type="button" title="Wednesday" style="font-family: 'Azeret Mono', monospace;color: #ffffff;background: #343434;">W</button><button class="btn btn-primary fw-bold border rounded-0 border-0 col ps-0 pe-0" data-bs-toggle="tooltip" data-bss-tooltip="" type="button" title="Thursday" style="font-family: 'Azeret Mono', monospace;background: #343434;color: #ffffff;">T</button><button class="btn btn-primary fw-bold border rounded-0 border-0 col ps-0 pe-0" data-bs-toggle="tooltip" data-bss-tooltip="" type="button" title="Friday" style="font-family: 'Azeret Mono', monospace;background: #343434;color: #ffffff;">F</button><button class="btn btn-primary fw-bold col ps-0 pe-1" data-bs-toggle="tooltip" data-bss-tooltip="" type="button" style="border-top-right-radius: 50rem;border-bottom-right-radius: 50rem;font-family: 'Azeret Mono', monospace;color: #ffffff;background: #343434;" title="Saturday">S</button></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer d-flex align-items-stretch px-0 py-0"><button class="btn btn-primary flex-grow-1 py-2" type="submit" style="border-top-left-radius: 0;border-top-right-radius: 0;">Submit</button></div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/Show.js"></script>
+</body>
+
+</html>
